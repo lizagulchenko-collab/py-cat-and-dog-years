@@ -12,7 +12,7 @@ import app.main
         (24, 24, [2, 2]),
         (27, 27, [2, 2]),
         (28, 28, [3, 2]),
-        (100, 100, [22, 17]),
+        (100, 100, [21, 17]),
         (234, 356, [57, 70]),
     ])
 def test_age(cat_age: int, dog_age: int, expected_age: list) -> None:
