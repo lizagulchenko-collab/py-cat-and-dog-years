@@ -5,24 +5,15 @@ import app.main
 @pytest.mark.parametrize(
     "cat_age, dog_age, expected_age",
     [
-        (0, 0, [0, 0],
-        id="Test with age equal to zero"),
-        (14, 14, [0, 0],
-        id="Not yet 1 human year"),
-        (15, 15, [1, 1],
-        id="First year should start from 15"),
-        (23, 23, [1, 1],
-        id="Not yet 2 human years"),
-        (24, 24, [2, 2],
-        id="Second year should start from 24"),
-        (27, 27, [2, 2],
-        id="Not yet 3 human years"),
-        (28, 28, [3, 2],
-        id="Cat years are going faster then dog years"),
-        (100, 100, [22, 17],
-        id="Test with high age"),
-        (234, 356, [57, 70],
-        id="Test with different high age")
+        (0, 0, [0, 0]),
+        (14, 14, [0, 0]),
+        (15, 15, [1, 1]),
+        (23, 23, [1, 1]),
+        (24, 24, [2, 2]),
+        (27, 27, [2, 2]),
+        (28, 28, [3, 2]),
+        (100, 100, [22, 17]),
+        (234, 356, [57, 70]),
     ])
 def test_age(cat_age: int, dog_age: int, expected: list) -> None:
     assert app.main.get_human_age(cat_age, dog_age) == expected
