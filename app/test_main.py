@@ -15,8 +15,8 @@ import app.main
         (100, 100, [22, 17]),
         (234, 356, [57, 70]),
     ])
-def test_age(cat_age: int, dog_age: int, expected: list) -> None:
-    assert app.main.get_human_age(cat_age, dog_age) == expected
+def test_age(cat_age: int, dog_age: int, expected_age: list) -> None:
+    assert app.main.get_human_age(cat_age, dog_age) == expected_age
 
 
 @pytest.mark.parametrize(
